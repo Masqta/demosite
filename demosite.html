@@ -1,64 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="bg">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PlayStation Сервиз София</title>
 
 <style>
-body{
-font-family: Arial;
+
+*{
 margin:0;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#0b0f1a;
 color:white;
 }
 
 header{
-background:#111827;
-padding:40px;
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+background:linear-gradient(120deg,#0b0f1a,#111827);
 }
 
 h1{
-font-size:38px;
+font-size:48px;
+margin-bottom:20px;
+animation:fadeIn 2s ease;
+}
+
+p{
+font-size:18px;
+opacity:0.8;
 }
 
 button{
-background:#3b82f6;
+margin-top:25px;
+padding:15px 30px;
 border:none;
-padding:15px 25px;
+background:#2563eb;
 color:white;
-font-size:16px;
+font-size:18px;
 border-radius:8px;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#3b82f6;
 }
 
 section{
-padding:40px;
-max-width:1000px;
-margin:auto;
+padding:80px 10%;
 }
 
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:30px;
+margin-top:40px;
 }
 
 .card{
+background:#111827;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 background:#1f2937;
-padding:20px;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.review{
+background:#111827;
+padding:25px;
 border-radius:10px;
 }
 
 footer{
-background:#111827;
+background:#020617;
 text-align:center;
-padding:20px;
+padding:30px;
+margin-top:50px;
 }
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 </style>
 </head>
+
 
 <body>
 
@@ -83,22 +142,22 @@ padding:20px;
 
 <div class="card">
 <h3>Ремонт на PS5</h3>
-<p>Диагностика и ремонт на всички проблеми.</p>
+<p>Професионална диагностика и ремонт.</p>
 </div>
 
 <div class="card">
 <h3>Почистване</h3>
-<p>Пълно вътрешно почистване и смяна на термопаста.</p>
+<p>Пълна профилактика и смяна на термопаста.</p>
 </div>
 
 <div class="card">
 <h3>HDMI ремонт</h3>
-<p>Смяна и ремонт на HDMI порт.</p>
+<p>Смяна на HDMI порт.</p>
 </div>
 
 <div class="card">
 <h3>Ремонт на контролери</h3>
-<p>Поправка на stick drift и бутони.</p>
+<p>Stick drift и бутони.</p>
 </div>
 
 </div>
@@ -108,12 +167,26 @@ padding:20px;
 
 <section>
 
-<h2>Защо да изберете нас</h2>
+<h2>Отзиви от клиенти</h2>
 
-<p>✔ Бърз ремонт (1-2 дни)</p>
-<p>✔ Над 100 доволни клиента</p>
-<p>✔ Професионална диагностика</p>
-<p>✔ Възможност за изпращане с Еконт или Speedy</p>
+<div class="reviews">
+
+<div class="review">
+⭐️⭐️⭐️⭐️⭐️  
+<p>Много бърз ремонт. PS5 беше готов за 2 дни.</p>
+</div>
+
+<div class="review">
+⭐️⭐️⭐️⭐️⭐️  
+<p>Професионално обслужване и добри цени.</p>
+</div>
+
+<div class="review">
+⭐️⭐️⭐️⭐️⭐️  
+<p>Конзолата работи като нова след ремонта.</p>
+</div>
+
+</div>
 
 </section>
 
@@ -123,15 +196,20 @@ padding:20px;
 <h2>Контакти</h2>
 
 <p>📍 София</p>
+
 <p>📞 088 854 5465</p>
 
+<p>Изпращане чрез Еконт или Speedy.</p>
+
 </section>
+
 
 <footer>
 
 <p>© PlayStation Сервиз София</p>
 
 </footer>
+
 
 </body>
 </html>
